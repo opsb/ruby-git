@@ -11,7 +11,7 @@ begin
     gem.files = FileList["lib/**/*.rb"]
     gem.test_files = FileList["test/*.rb"]
     gem.extra_rdoc_files = ["README"]
-    gem.requirements << 'git 1.6.0.0, or greater'
+    gem.requirements << 'git 1.5.6.5, or greater'
     
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
