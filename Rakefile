@@ -8,7 +8,6 @@ begin
     gem.email = "schacon@gmail.com"
     gem.homepage = "http://github.com/schacon/ruby-git"
     gem.authors = "Scott Chacon"
-    gem.rubyforge_project = "git"
     gem.files = FileList["lib/**/*.rb"]
     gem.test_files = FileList["test/*.rb"]
     gem.extra_rdoc_files = ["README"]
