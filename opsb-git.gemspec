@@ -37,7 +37,6 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.requirements = ["git 1.6.0.0, or greater"]
-  s.rubyforge_project = %q{git}
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Ruby/Git is a Ruby library that can be used to create, read and manipulate Git repositories by wrapping system calls to the git binary}
 
