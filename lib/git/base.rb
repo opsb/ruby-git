@@ -303,8 +303,8 @@ module Git
     #
     #  @git.config('remote.remote-name.push', 'refs/heads/master:refs/heads/master')
     #
-    def push(remote = 'origin', branch = 'master', tags = false)
-      self.lib.push(remote, branch, tags)
+    def push(remote = 'origin', branch = 'master', tags = false, options = [])
+      self.lib.push(remote, branch, tags, options)
     end
     
     # merges one or more branches into the current working branch
