@@ -658,11 +658,13 @@ module Git
     def meets_required_version?
       current_version  = self.current_command_version
       required_version = self.required_command_version
+      
+      as_number = Proc.new do |version|
+        major, *minor = *version
+        "#{major}.#{minor.join}".to_f
+      end
 
-      return current_version[0] >= required_version[0] && 
-             current_version[1] >= required_version[1] &&
-             (current_version[2] ? current_version[2] >= required_version[2] : true) &&
-             (current_version[3] ? current_version[3] >= required_version[3] : true)
+      as_number[current_version] >= as_number[required_version]
     end
 
 
