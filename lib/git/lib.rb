@@ -559,8 +559,9 @@ module Git
     end
     
     def push(remote, branch = 'master', tags = false, options = [])
-      command('push', ([remote, branch] + options))
-      command('push', (['--tags', remote] + options) ) if tags
+      out = command('push', ([remote, branch] + options))
+      out += "\n\n" + command('push', (['--tags', remote] + options) ) if tags
+      out
     end
     
     def tag_sha(tag_name)
